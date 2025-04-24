@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TheFork Restaurant Scraper</title>
+  <style>
+    body {
+      width: 400px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    
+    h1 {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    
+    #restaurant-list {
+      max-height: 400px;
+      overflow-y: auto;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .restaurant-item {
+      padding: 8px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .restaurant-item:last-child {
+      border-bottom: none;
+    }
+    
+    .restaurant-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .restaurant-link {
+      color: #0078d7;
+      text-decoration: none;
+      display: block;
+      margin-top: 3px;
+      font-size: 12px;
+      word-break: break-all;
+    }
+    
+    #export-btn {
+      background-color: #0078d7;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    #export-btn:hover {
+      background-color: #005a9e;
+    }
+    
+    #status {
+      margin-top: 10px;
+      color: #666;
+    }
+    
+    .error {
+      color: red;
+    }
+    
+    .success {
+      color: green; 
+    }
+  </style>
+</head>
+<body>
+  <h1>TheFork Restaurant Scraper</h1>
+  
+  <div id="restaurant-list">
+    <p>Loading restaurants...</p>
+  </div>
+  
+  <button id="export-btn" disabled>Export links (CSV)</button>
+  
+  <div id="status"></div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
